@@ -21,6 +21,8 @@
     "incremental": true,
     "skipLibCheck": true,
     "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
     "strictPropertyInitialization": false,
     "paths": {
       "@app/shared": [

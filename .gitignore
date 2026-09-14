@@ -1,0 +1,39 @@
+# compiled output & dependencies
+node_modules/
+dist/
+.env
+
+# AI & LLM tooling, agent instructions, and prompt files
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+CHATGPT.md
+COPILOT.md
+PROMPTS.md
+INSTRUCTIONS.md
+MODELO.md
+docs/
+*.agent.md
+*.prompt.md
+implementation_plan.md
+walkthrough.md
+
+# AI assistant & editor configuration directories
+.agents/
+.agent/
+.cursor/
+.cursorrules
+.windsurf/
+.windsurfrules
+.cline/
+.roomodes
+.continue/
+.aider*
+.claude/
+.gemini/
+.system_generated/
+.github/copilot-instructions.md
+
+# OS & Logs
+.DS_Store
+*.log
