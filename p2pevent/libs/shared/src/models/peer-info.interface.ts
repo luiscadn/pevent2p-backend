@@ -6,6 +6,7 @@ export interface PeerInfo {
   userId: number; // qué usuario lo opera
   zoneId: number; // en qué zona está
   ringPath: RingPath; // en qué anillo está: [] o [1] o [1,3]
-  index: number; // su posición en el anillo (0 = padre)
+  index: number; // su ASIENTO en el anillo: permanente, nunca se reutiliza
+  isParent: boolean; // ¿es el padre de su anillo? Lo asigna el servidor
   lastSeen: number; // timestamp del último contacto
 }

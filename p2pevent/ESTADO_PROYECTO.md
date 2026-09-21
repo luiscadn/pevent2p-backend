@@ -1,26 +1,26 @@
 # 📊 Estado del proyecto CityPulse
 
-> Generado el **lunes, 21 de septiembre de 2026, 8:08 a. m.**
+> Generado el **lunes, 21 de septiembre de 2026, 8:43 a. m.**
 > Entrega del backend: **7 de oct** · Quedan **17 días**
 
-## Progreso global: 41 %
+## Progreso global: 45 %
 
 ```
-████████████░░░░░░░░░░░░░░░░░░  41 %
+██████████████░░░░░░░░░░░░░░░░  45 %
 ```
 
 | ✅ Completo | 🟠 Incompleto | 🟡 Esqueleto | ❌ Falta | ⚠️ Sobra |
 |:-:|:-:|:-:|:-:|:-:|
-| 26 | 10 | 21 | 26 | 0 |
+| 31 | 7 | 20 | 25 | 0 |
 
 ## Progreso por área
 
 | Área | Progreso | % | ✅ | 🟠 | 🟡 | ❌ | ⚠️ |
 |---|---|--:|:-:|:-:|:-:|:-:|:-:|
 | 0. Infraestructura | `██████████` | 100 % | 10 | 0 | 0 | 0 | 0 |
-| 1. libs/shared | `████████░░` | 82 % | 8 | 2 | 0 | 1 | 0 |
+| 1. libs/shared | `██████████` | 100 % | 11 | 0 | 0 | 0 | 0 |
 | 2. Nodo · configuración | `██████████` | 100 % | 4 | 0 | 0 | 0 | 0 |
-| 3. Nodo · topología | `██░░░░░░░░` | 24 % | 0 | 1 | 3 | 0 | 0 |
+| 3. Nodo · topología | `██████░░░░` | 57 % | 2 | 0 | 2 | 0 | 0 |
 | 4. Nodo · red | `██░░░░░░░░` | 20 % | 0 | 1 | 6 | 0 | 0 |
 | 5. Nodo · índice y dominio | `██░░░░░░░░` | 15 % | 0 | 1 | 7 | 2 | 0 |
 | 6. Servidor · configuración | `████████░░` | 83 % | 2 | 1 | 0 | 0 | 0 |
@@ -35,7 +35,7 @@ Estas clases van **en serie**: cada una depende de la anterior. Determinan la fe
 ```
 ✅ ring-path.util
    ↓
-🟡 TopologyService
+✅ TopologyService
    ↓
 🟡 RoutingService
    ↓
@@ -50,22 +50,18 @@ Estas clases van **en serie**: cada una depende de la anterior. Determinan la fe
 
 ### 🔲 H1 · 28 de sept — El anillo se forma con 4 nodos
 
-`██████░░░░` **15 / 27** requisitos listos · quedan 8 días
+`███████░░░` **19 / 27** requisitos listos · quedan 8 días
 
 <details><summary>Pendientes</summary>
 
-- 🟠 **Interfaz PeerInfo** — falta: isParent (corrección auditoría)
-- 🟠 **RingPath, MyNeighbors y RingInfo** — falta: nextIndex (corrección auditoría)
-- 🟡 **TopologyService (mi posición y mis vecinos)** — creado pero vacío (encontrado en apps/nodo/src/topology/topology/topology.service.ts)
-- 🟡 **JoinService (entrar a la red)** — creado pero vacío (encontrado en apps/nodo/src/topology/join/join.service.ts)
-- 🟠 **TopologyModule** — falta: exports
-- 🟡 **PeerController (endpoints para otros nodos)** — creado pero vacío (encontrado en apps/nodo/src/network/peer/peer.controller.ts)
-- 🟡 **PeerClientService (enviar a otros nodos)** — creado pero vacío (encontrado en apps/nodo/src/network/peer-client/peer-client.service.ts)
+- 🟡 **JoinService (entrar a la red)** — creado pero vacío
+- 🟡 **PeerController (endpoints para otros nodos)** — creado pero vacío
+- 🟡 **PeerClientService (enviar a otros nodos)** — creado pero vacío
 - 🟠 **Módulo raíz del servidor** — falta: FriendshipsModule, AttendancesModule, InvitationsModule
-- 🟡 **DirectoryService (nodos activos en memoria)** — creado pero vacío (encontrado en apps/servidor/src/directory/directory/directory.service.ts)
-- 🟡 **RingRegistryService (todos los anillos)** — creado pero vacío (encontrado en apps/servidor/src/ring/ring-registry/ring-registry.service.ts)
-- 🟡 **RingAllocatorService (decide la topología)** — creado pero vacío (encontrado en apps/servidor/src/ring/ring-allocator/ring-allocator.service.ts)
-- 🟡 **RingController** — creado pero vacío (encontrado en apps/servidor/src/ring/ring/ring.controller.ts)
+- 🟡 **DirectoryService (nodos activos en memoria)** — creado pero vacío
+- 🟡 **RingRegistryService (todos los anillos)** — creado pero vacío
+- 🟡 **RingAllocatorService (decide la topología)** — creado pero vacío
+- 🟡 **RingController** — creado pero vacío
 
 </details>
 
@@ -75,9 +71,9 @@ Estas clases van **en serie**: cada una depende de la anterior. Determinan la fe
 
 <details><summary>Pendientes</summary>
 
-- 🟡 **RoutingService (nextHop)** — creado pero vacío (encontrado en apps/nodo/src/topology/routing/routing.service.ts)
-- 🟡 **MessageRouterService (el cerebro)** — creado pero vacío (encontrado en apps/nodo/src/network/message-router/message-router.service.ts)
-- 🟡 **BroadcastService (difusión)** — creado pero vacío (encontrado en apps/nodo/src/network/broadcast/broadcast.service.ts)
+- 🟡 **RoutingService (nextHop)** — creado pero vacío
+- 🟡 **MessageRouterService (el cerebro)** — creado pero vacío
+- 🟡 **BroadcastService (difusión)** — creado pero vacío
 - 🟠 **NetworkModule** — falta: importa TopologyModule
 - 🟡 **LocalIndexService (caché de eventos)** — creado pero vacío
 - 🟡 **Eventos · controller** — creado pero vacío
@@ -93,8 +89,8 @@ Estas clases van **en serie**: cada una depende de la anterior. Determinan la fe
 
 <details><summary>Pendientes</summary>
 
-- 🟡 **ServerSyncService (cola de reintentos)** — creado pero vacío (encontrado en apps/nodo/src/network/server-sync/server-sync.service.ts)
-- 🟡 **HeartbeatService (latidos)** — creado pero vacío (encontrado en apps/nodo/src/network/heartbeat/heartbeat.service.ts)
+- 🟡 **ServerSyncService (cola de reintentos)** — creado pero vacío
+- 🟡 **HeartbeatService (latidos)** — creado pero vacío
 - 🟠 **Eventos (persistencia) · module** — falta: providers
 - ❌ **Eventos (persistencia) · controller** — esperado en apps/servidor/src/events/events.controller.ts
 
@@ -104,14 +100,14 @@ Estas clases van **en serie**: cada una depende de la anterior. Determinan la fe
 
 Ordenados por prioridad: primero la ruta crítica, después los requisitos del hito más cercano.
 
-1. 🟡 **TopologyService (mi posición y mis vecinos)** — creado pero vacío (encontrado en apps/nodo/src/topology/topology/topology.service.ts)
-2. 🟡 **RoutingService (nextHop)** — creado pero vacío (encontrado en apps/nodo/src/topology/routing/routing.service.ts)
-3. 🟡 **MessageRouterService (el cerebro)** — creado pero vacío (encontrado en apps/nodo/src/network/message-router/message-router.service.ts)
-4. 🟡 **BroadcastService (difusión)** — creado pero vacío (encontrado en apps/nodo/src/network/broadcast/broadcast.service.ts)
-5. 🟡 **Eventos · service** — creado pero vacío
-6. 🟠 **Interfaz PeerInfo** — falta: isParent (corrección auditoría)
-7. 🟠 **RingPath, MyNeighbors y RingInfo** — falta: nextIndex (corrección auditoría)
-8. 🟡 **JoinService (entrar a la red)** — creado pero vacío (encontrado en apps/nodo/src/topology/join/join.service.ts)
+1. 🟡 **RoutingService (nextHop)** — creado pero vacío
+2. 🟡 **MessageRouterService (el cerebro)** — creado pero vacío
+3. 🟡 **BroadcastService (difusión)** — creado pero vacío
+4. 🟡 **Eventos · service** — creado pero vacío
+5. 🟡 **JoinService (entrar a la red)** — creado pero vacío
+6. 🟡 **PeerController (endpoints para otros nodos)** — creado pero vacío
+7. 🟡 **PeerClientService (enviar a otros nodos)** — creado pero vacío
+8. 🟠 **Módulo raíz del servidor** — falta: FriendshipsModule, AttendancesModule, InvitationsModule
 
 ## 📋 Detalle por área
 
@@ -132,21 +128,21 @@ Ordenados por prioridad: primero la ruta crítica, después los requisitos del h
 | ✅ | Scripts para levantar servidor y varios nodos | servidor, build y nodo1..4 |
 | ✅ | Resto del proyecto original (apps/citypulse) | no existe (correcto) |
 
-### 1. libs/shared — 82 %
+### 1. libs/shared — 100 %
 
 | | Elemento | Detalle |
 |:-:|---|---|
 | ✅ | Interfaz Event | 8/8 elementos clave |
 | ✅ | Interfaz User | 3/3 elementos clave |
 | ✅ | Interfaz Zone | 2/2 elementos clave |
-| ❌ | Interfaz Report (efímero) | esperado en libs/shared/src/models/report.interface.ts |
-| 🟠 | Interfaz PeerInfo | falta: isParent (corrección auditoría) |
-| 🟠 | RingPath, MyNeighbors y RingInfo | falta: nextIndex (corrección auditoría) |
+| ✅ | Interfaz Report (efímero) | 2/2 elementos clave |
+| ✅ | Interfaz PeerInfo | 5/5 elementos clave |
+| ✅ | RingPath, MyNeighbors y RingInfo | 6/6 elementos clave |
 | ✅ | Enum MessageType | 8/8 elementos clave |
 | ✅ | Envoltura PeerMessage y enum Scope | 7/7 elementos clave |
 | ✅ | Payloads de los mensajes | 3 payloads |
 | ✅ | ring-path.util (las 4 funciones puras) | 4/4 elementos clave |
-| ✅ | index.ts exporta todo lo de shared | 14 archivos exportados |
+| ✅ | index.ts exporta todo lo de shared | 12 archivos exportados |
 | ✅ | Carpeta crypto/ (fuera de alcance) | no existe (correcto) |
 
 ### 2. Nodo · configuración — 100 %
@@ -160,25 +156,25 @@ Ordenados por prioridad: primero la ruta crítica, después los requisitos del h
 | ✅ | NodeConfigService (identidad del nodo) | 5/5 elementos clave |
 | ✅ | NodeConfigModule global | 2/2 elementos clave |
 
-### 3. Nodo · topología — 24 %
+### 3. Nodo · topología — 57 %
 
 | | Elemento | Detalle |
 |:-:|---|---|
-| 🟡 | TopologyService (mi posición y mis vecinos) | creado pero vacío (encontrado en apps/nodo/src/topology/topology/topology.service.ts) |
-| 🟡 | RoutingService (nextHop) | creado pero vacío (encontrado en apps/nodo/src/topology/routing/routing.service.ts) |
-| 🟡 | JoinService (entrar a la red) | creado pero vacío (encontrado en apps/nodo/src/topology/join/join.service.ts) |
-| 🟠 | TopologyModule | falta: exports |
+| ✅ | TopologyService (mi posición y mis vecinos) | 4/4 elementos clave |
+| 🟡 | RoutingService (nextHop) | creado pero vacío |
+| 🟡 | JoinService (entrar a la red) | creado pero vacío |
+| ✅ | TopologyModule | 2/2 elementos clave |
 
 ### 4. Nodo · red — 20 %
 
 | | Elemento | Detalle |
 |:-:|---|---|
-| 🟡 | PeerController (endpoints para otros nodos) | creado pero vacío (encontrado en apps/nodo/src/network/peer/peer.controller.ts) |
-| 🟡 | PeerClientService (enviar a otros nodos) | creado pero vacío (encontrado en apps/nodo/src/network/peer-client/peer-client.service.ts) |
-| 🟡 | MessageRouterService (el cerebro) | creado pero vacío (encontrado en apps/nodo/src/network/message-router/message-router.service.ts) |
-| 🟡 | BroadcastService (difusión) | creado pero vacío (encontrado en apps/nodo/src/network/broadcast/broadcast.service.ts) |
-| 🟡 | HeartbeatService (latidos) | creado pero vacío (encontrado en apps/nodo/src/network/heartbeat/heartbeat.service.ts) |
-| 🟡 | ServerSyncService (cola de reintentos) | creado pero vacío (encontrado en apps/nodo/src/network/server-sync/server-sync.service.ts) |
+| 🟡 | PeerController (endpoints para otros nodos) | creado pero vacío |
+| 🟡 | PeerClientService (enviar a otros nodos) | creado pero vacío |
+| 🟡 | MessageRouterService (el cerebro) | creado pero vacío |
+| 🟡 | BroadcastService (difusión) | creado pero vacío |
+| 🟡 | HeartbeatService (latidos) | creado pero vacío |
+| 🟡 | ServerSyncService (cola de reintentos) | creado pero vacío |
 | 🟠 | NetworkModule | falta: importa TopologyModule |
 
 ### 5. Nodo · índice y dominio — 15 %
@@ -210,11 +206,11 @@ Ordenados por prioridad: primero la ruta crítica, después los requisitos del h
 
 | | Elemento | Detalle |
 |:-:|---|---|
-| 🟡 | DirectoryService (nodos activos en memoria) | creado pero vacío (encontrado en apps/servidor/src/directory/directory/directory.service.ts) |
-| 🟡 | DirectoryController | creado pero vacío (encontrado en apps/servidor/src/directory/directory/directory.controller.ts) |
-| 🟡 | RingRegistryService (todos los anillos) | creado pero vacío (encontrado en apps/servidor/src/ring/ring-registry/ring-registry.service.ts) |
-| 🟡 | RingAllocatorService (decide la topología) | creado pero vacío (encontrado en apps/servidor/src/ring/ring-allocator/ring-allocator.service.ts) |
-| 🟡 | RingController | creado pero vacío (encontrado en apps/servidor/src/ring/ring/ring.controller.ts) |
+| 🟡 | DirectoryService (nodos activos en memoria) | creado pero vacío |
+| 🟡 | DirectoryController | creado pero vacío |
+| 🟡 | RingRegistryService (todos los anillos) | creado pero vacío |
+| 🟡 | RingAllocatorService (decide la topología) | creado pero vacío |
+| 🟡 | RingController | creado pero vacío |
 | ✅ | DirectoryModule | 2/2 elementos clave |
 | ✅ | RingModule | 2/2 elementos clave |
 

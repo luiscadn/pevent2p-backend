@@ -1,8 +1,3 @@
-// Exportaciones existentes
-export * from './shared.module';
-export * from './shared.service';
-export const SHARED_OK = true;
-
 // Modelos del Dominio y Topología
 export * from './models/user.interface';
 export * from './models/zone.interface';

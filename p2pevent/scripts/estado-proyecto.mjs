@@ -467,7 +467,7 @@ archivo({
 
 archivo({
   area: A.SHARED, id: 'shared.report', desc: 'Interfaz Report (efímero)', tipo: 'interface',
-  rutas: variantes('models/report'), buscarEn: SHR,
+  rutas: [...variantes('models/report'), ...variantes('models/incident')], buscarEn: SHR,
   marcadores: [['zoneId', /\bzoneId\s*[?]?:/], ['expiresAt', /\bexpiresAt\s*[?]?:/]],
 });
 

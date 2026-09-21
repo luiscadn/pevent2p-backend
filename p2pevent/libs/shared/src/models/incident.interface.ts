@@ -19,3 +19,4 @@ export interface Incident {
 // Aliases por consistencia con la documentación de reportes efímeros
 export type Report = Incident;
 export const ReportType = IncidentType;
+export type ReportType = IncidentType;

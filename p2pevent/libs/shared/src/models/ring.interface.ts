@@ -5,7 +5,7 @@ import { RingPath } from '../ring/ring-path.util';
 export interface RingPosition {
   ringPath: RingPath;
   index: number;
-  isParent: boolean; // index === 0
+  isParent: boolean; // lo asigna el servidor (NO se deduce de index)
 }
 
 // Quiénes son mis vecinos (esto es TODO lo que un nodo guarda de la red)
@@ -23,5 +23,6 @@ export interface RingInfo {
   ringPath: RingPath;
   zoneId: number;
   members: PeerInfo[]; // en orden circular
+  nextIndex: number; // próximo asiento libre. Nunca se reutiliza
   foreignParentId?: string;
 }

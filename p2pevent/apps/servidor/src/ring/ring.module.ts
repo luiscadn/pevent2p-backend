@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
-import { RingRegistryService } from './ring-registry/ring-registry.service';
-import { RingAllocatorService } from './ring-allocator/ring-allocator.service';
-import { RingController } from './ring/ring.controller';
+import { RingRegistryService } from './ring-registry.service';
+import { RingAllocatorService } from './ring-allocator.service';
+import { RingController } from './ring.controller';
 
 @Module({
   providers: [RingRegistryService, RingAllocatorService],
