@@ -3,6 +3,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { ZoneModule } from './zone/zone.module';
 
 @Module({
   imports: [
@@ -22,6 +23,8 @@ import { AppService } from './app.service';
         logging: config.get<string>('DB_LOGGING') === 'true',
       }),
     }),
+
+    ZoneModule,
   ],
   controllers: [AppController],
   providers: [AppService],
