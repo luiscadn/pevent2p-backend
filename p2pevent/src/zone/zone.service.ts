@@ -3,11 +3,12 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Zone } from './entities/zone.entity';
-import { CreateZoneDto } from './dto/create-zone.dto';
-import { UpdateZoneDto } from './dto/update-zone.dto';
+import { CreateZoneDto } from './dtos/create-zone.dto';
+import { UpdateZoneDto } from './dtos/update-zone.dto';
 
 @Injectable()
 export class ZoneService {
+//llamado de repositorio
   constructor(
     @InjectRepository(Zone)
     private readonly zoneRepo: Repository<Zone>,
@@ -23,7 +24,7 @@ export class ZoneService {
   }
 
   async findOne(id: number) {
-    
+
     const zone = await this.zoneRepo.findOne({ where: { id } });
 
     if (!zone){
@@ -35,14 +36,20 @@ export class ZoneService {
   }
 
   async update(id: number, dto: UpdateZoneDto) {
+
     await this.findOne(id);
-    await this.zoneRepo.update(id, dto);
+
+    await this.zoneRepo.update(id, dto);//es una actualizacion completa atravez del update 
+
     return this.findOne(id);
   }
 
   async remove(id: number) {
+
     await this.findOne(id);
+
     await this.zoneRepo.delete(id);
+
     return { deleted: true };
   }
 }
